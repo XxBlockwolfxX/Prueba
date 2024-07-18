@@ -8,7 +8,7 @@ class ControladorVentas {
         if(isset($_POST["cliente_id"]) && isset($_POST["producto_id"]) && isset($_POST["cantidad"]) && isset($_POST["precio_total"])) {
             $tablaVentas = "ventas";
             $tablaProductos = "productos";
-            $fecha = date('Y-m-d H:i:s'); // Use current timestamp
+            $fecha = date('Y-m-d H:i:s'); 
             $datos = array(
                 "cliente_id" => $_POST["cliente_id"],
                 "producto_id" => $_POST["producto_id"],
@@ -38,7 +38,7 @@ class ControladorVentas {
     static public function ctrEditarVenta() {
         if(isset($_POST["idVenta"]) && isset($_POST["cliente_id"]) && isset($_POST["producto_id"]) && isset($_POST["cantidad"]) && isset($_POST["precio_total"])) {
             $tabla = "ventas";
-            $fecha = date('Y-m-d H:i:s'); // Use current timestamp
+            $fecha = date('Y-m-d H:i:s');
             $datos = array(
                 "id" => $_POST["idVenta"],
                 "cliente_id" => $_POST["cliente_id"],
